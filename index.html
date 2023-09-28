@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./js/libs/youtubeLightbox/youtubeLightbox.css">
     <title>LoftHouse</title>
 </head>
 
@@ -116,7 +117,7 @@
                     </div>
                     <form class="cta__form form" action="">
                         <input type="text" class="form__input" placeholder="Ваше имя" autocomplite="off">
-                        <input type="text" class="form__input" placeholder="Ваш телефон" autocomplite="off">
+                        <input data-tel-input type="phone" class="form__input" placeholder="Ваш телефон" autocomplite="off">
                         <p class="form__privacy form__privacy--bottom">*Мы никому не передаем ваши данные. <br>
                             И не сохраняем ваш номер в базу.</p>
                         <button class="form__btn">Посмотреть район</button>
@@ -127,7 +128,7 @@
         <section class="video">
             <div class="container">
                 <h2 class="visually-hidden">Видео о ЖК</h2>
-                <a href="" class="video__link">
+                <a href="https://www.youtube.com/watch?v=KRrpktEb-Qo" class="video__link" data-youtubeLightbox>
                     <img src="./img/video/video-btn.svg" alt="" class="video__icon">
                     <img src="./img/video/video-img.jpg" alt="" class="video__img">
                 </a>
@@ -152,7 +153,7 @@
                     <p class="form__privacy form__privacy--bottom">*Мы никому не передаем ваши данные. <br>
                         И не сохраняем ваш номер в базу.</p>
                     <input type="text" class="form__input" placeholder="Ваше имя" autocomplite="off">
-                    <input type="text" class="form__input" placeholder="Ваш телефон" autocomplite="off">
+                    <input data-tel-input type="phone" class="form__input" placeholder="Ваш телефон" autocomplite="off">
                     <button class="form__btn">Посмотреть район</button>
                 </form>
             </div>
@@ -206,6 +207,21 @@
         </div>
     </footer>
 
+    <div id="youtubelightbox" class="youtubelightbox">
+        <div class="youtubelightbox__centeredchild">
+            <div class="youtubelightbox__videowrapper">
+                <div id="youtubelightboxPlayer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=100a2612-bf0b-4e05-82a7-74cafc84cdc6&lang=ru_RU" type="text/javascript"></script>
+
+
+    <script src="./js/libs/phoneMask/mask.js"></script>
+    <script src="./js/libs/phoneMask/mask_list.js"></script>
+
+    <script src="./js/libs/youtubeLightbox/youtubeLightbox.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
